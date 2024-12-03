@@ -1,0 +1,83 @@
+<body>
+<div class="container mt-4">
+    <div class="row">
+      <!-- Formularz rejestracji -->
+      <div class="col-md-6">
+        <div class="card">
+          <h5 class="card-header">Rejestracja</h5>
+          <div class="card-body">
+            <form (ngSubmit)="dodaj()">
+              <label class="card-text">Imię:</label>
+              <input type="text" [(ngModel)]="uzytkownik.imie" name="imie" class="form-control" required />
+              <br>
+  
+              <label class="card-text">Nazwisko:</label>
+              <input type="text" [(ngModel)]="uzytkownik.nazwisko" name="nazwisko" class="form-control" required />
+              <br>
+  
+              <label class="card-text">E-mail:</label>
+              <input type="email" [(ngModel)]="uzytkownik.email" name="email" class="form-control" required />
+              <br>
+  
+              <label class="card-text">Hasło:</label>
+              <input type="password" [(ngModel)]="uzytkownik.haslo" name="haslo" class="form-control" required />
+              <br>
+  
+              <label class="card-text">Potwierdź hasło:</label>
+              <input type="password" [(ngModel)]="uzytkownik.potwierdzhaslo" name="potwierdzhaslo" class="form-control" required />
+              <br>
+  
+              <label class="card-text">Wiek:</label>
+              <input type="number" [(ngModel)]="uzytkownik.wiek" name="wiek" class="form-control" required min="17" #wiek="ngModel" />
+              <div *ngIf="wiek.invalid && wiek.touched">
+                <small class="text-danger">Wiek musi wynosić co najmniej 17 lat.</small>
+              </div>
+              <br>
+  
+              <label class="card-text">Stanowisko:</label>
+              <select [(ngModel)]="uzytkownik.praca" name="praca" class="form-control" required>
+                <option *ngFor="let praca of prace" [value]="praca">{{ praca }}</option>
+              </select>
+              <br>
+  
+              <label class="card-text">Zgoda na przetwarzanie danych</label>
+              <input type="checkbox" [(ngModel)]="uzytkownik.zgoda" name="zgoda" />
+              <br>
+  
+              <button type="submit" class="btn btn-primary" [disabled]="!uzytkownik.zgoda">Dodaj użytkownika</button>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Lista użytkowników -->
+      <div class="col-md-6">
+        <div class="card">
+          <h5 class="card-header text-center">Lista użytkowników</h5>
+          <div class="card-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Imię</th>
+                  <th>Nazwisko</th>
+                  <th>E-mail</th>
+                  <th>Stanowisko</th>
+                  <th>Wiek</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of uzytkownicy">
+                  <td>{{ user.imie }}</td>
+                  <td>{{ user.nazwisko }}</td>
+                  <td>{{ user.email }}</td>
+                  <td>{{ user.praca }}</td>
+                  <td>{{ user.wiek }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>   

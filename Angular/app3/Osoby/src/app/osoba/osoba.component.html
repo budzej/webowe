@@ -1,0 +1,18 @@
+<div style="text-align:center;">
+    <form (ngSubmit)="sprawdzOsobe()">
+      <div>
+        <label for="imie">Imię:</label>
+        <input id="imie" type="text" [(ngModel)]="imie" name="imie" required>
+      </div>
+      <div>
+        <label for="nazwisko">Nazwisko:</label>
+        <input id="nazwisko" type="text" [(ngModel)]="nazwisko" name="nazwisko" required>
+      </div>
+      <div>
+        <label for="wiek">Wiek:</label>
+        <input id="wiek" type="number" [(ngModel)]="wiek" name="wiek" required>
+      </div>
+      <button type="submit">Sprawdź</button>
+    </form>
+  </div>
+  

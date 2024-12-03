@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #input-container {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="dodaj">Dodaj imię</button>
+
+    <div id="kontener">
+        <input type="text" id="input" placeholder="Wpisz swoje imię">
+        <button id="powitanie">Wyświetl powitanie</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#dodaj").click(function() {
+                $("#kontener").show();
+            });
+
+            $("#powitanie").click(function() {
+                const imie = $("#input").val().trim();
+                if (imie) {
+                    alert(`Witaj, ${imie}`);
+                    $("#input").val('');
+                } else {
+                    alert("Proszę wpisz imię.");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

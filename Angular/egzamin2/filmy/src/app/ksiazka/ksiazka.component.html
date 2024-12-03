@@ -1,0 +1,32 @@
+
+<form>
+    <div class="form-group">
+        <label for="bookTitle">Tytuł książki</label>
+        <input type="text" id="bookTitle" class="form-control" [(ngModel)]="bookTitle" name="bookTitle" required>
+    </div>
+    <div class="form-group">
+        <label for="bookCategory">Rodzaj</label>
+        <select id="bookCategory" class="form-control" name="bookCategory" [(ngModel)]="bookCategory" required>
+            <option value=""></option>
+            <option *ngFor="let category of bookCategories" [value]="category">{{ category }}</option>
+        </select>
+    </div>
+  
+    <button type="button" class="btn btn-primary" (click)="addBook()">Dodaj</button>
+    <p>{{wynik}}</p>
+
+    <ul>
+        <h1>Lista książek</h1>
+        <li *ngFor="let book of books">
+            
+            <p>{{ book.title }} - {{ book.category }}</p>
+        </li>
+    </ul>
+    <hr>
+    <div class="form-group">
+        <label for="newCategory">Nowy rodzaj książki</label>
+        <input type="text" id="newCategory" class="form-control" [(ngModel)]="newCategory" name="newCategory">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="addCategory()">Dodaj kategorię</button>
+
+</form>

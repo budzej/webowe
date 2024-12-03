@@ -1,0 +1,100 @@
+/* Całe tło strony */
+html, body {
+    background-color: #2b2b2b; /* Ciemne tło strony */
+    color: #eaeaea; /* Jasny kolor tekstu */
+    font-family: Arial, sans-serif;
+    height: 100%; /* Ustawienie pełnej wysokości */
+    margin: 0;
+  }
+  
+  /* Tło i styl karty formularza */
+  .card {
+    background-color: #333333; /* Ciemniejsze tło dla kart */
+    border: 1px solid #444444; /* Subtelna obwódka */
+    border-radius: 8px; /* Zaokrąglone rogi */
+    margin-bottom: 20px; /* Odstęp między kartami */
+  }
+  
+  /* Nagłówek karty */
+  .card-header {
+    background-color: #444444; /* Ciemniejszy nagłówek */
+    color: #ffffff; /* Jasny tekst */
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Ciemniejsze tło formularza */
+  .form-control {
+    background-color: #555555; /* Ciemne tło dla inputów */
+    color: #eaeaea; /* Jasny tekst w polach */
+    border: 1px solid #666666; /* Subtelna obwódka */
+    border-radius: 4px;
+  }
+  
+  .form-control:focus {
+    background-color: #666666; /* Jaśniejsze tło po kliknięciu */
+    border-color: #0056b3; /* Kolor obramowania podczas fokusu */
+  }
+  
+  /* Kolor etykiet formularza */
+  .card-text {
+    color: #d3d3d3; /* Jasny szary kolor tekstu */
+  }
+  
+  /* Kolor przycisku */
+  .btn-primary {
+    background-color: #007bff; /* Jasno-niebieski */
+    border-color: #007bff; /* Kolor obramowania */
+  }
+  
+  .btn-primary:disabled {
+    background-color: #666666; /* Zgaszony kolor przycisku */
+    border-color: #666666; /* Zgaszona obramowanie */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Ciemniejszy niebieski przy najechaniu */
+    border-color: #004085; /* Ciemniejsza obramowanie */
+  }
+  
+  /* Tabela - ciemniejsze tło */
+  .table {
+    background-color: #444444; /* Ciemne tło tabeli */
+    color: #eaeaea; /* Jasny tekst */
+    border-collapse: collapse; /* Ułatwia wygląd tabeli */
+    width: 100%; /* Ustawia tabelę na pełną szerokość */
+  }
+  
+  .table th, .table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #666666;
+  }
+  
+  .table th {
+    background-color: #555555; /* Ciemniejsze tło dla nagłówków tabeli */
+  }
+  
+  .table td {
+    border-top: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+  }
+  
+  /* Styl dla komunikatów o błędach */
+  .text-danger {
+    color: #ff4d4d; /* Czerwony kolor błędów */
+  }
+  
+  /* Zastosowanie dla ogólnego kontenera */
+  .container {
+    padding: 20px; /* Odstęp wewnętrzny */
+    max-width: 1200px; /* Maksymalna szerokość kontenera */
+    margin: 0 auto; /* Wyrównanie kontenera na środku */
+  }
+  
+  /* Dodatkowy margines dla formularza */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
