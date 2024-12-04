@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Kalkulator kuli</h1>
+  
+    <div class="form-group">
+      <label for="weight">Promien</label>
+      <input type="number" id="r" [(ngModel)]="r" class="form-control" />
+    </div>
+  
+    <button (click)="obliczkule()" class="btn btn-primary">Oblicz kule</button>
+  
+    <div>
+      <p>Pole {{ pole | number:"1.2-2" }} cm2</p>
+      <p>Objetosc {{ objetosc | number:"1.2-2" }} cm3</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>BMI</h1>
+  
+    <div class="form-group">
+      <label for="weight">Waga (kg):</label>
+      <input type="number" id="masa" [(ngModel)]="masa" class="form-control" />
+    </div>
+  
+    <div class="form-group">
+      <label for="height">Wzrost (m):</label>
+      <input type="number" id="wzrost" [(ngModel)]="wzrost" class="form-control" />
+    </div>
+  
+    <button (click)="obliczBMI()" class="btn btn-primary">Oblicz BMI</button>
+  
+    <div *ngIf="bmi !== null">
+      <p>Twoje BMI: {{ bmi | number:"1.1-1" }}</p>
+      <p>Kategoria: {{ kategoria }}</p>
+    </div>
+  </div>
+  
