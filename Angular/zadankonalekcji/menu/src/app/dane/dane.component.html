@@ -1,0 +1,67 @@
+
+    <div class="container mt-4">
+      <div class="row">
+        <!-- Formularz rejestracji -->
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <form >
+                <label class="card-text">Imię:</label>
+                <input type="text" [(ngModel)]="user.imie" name="imie" class="form-control" required />
+                <br>
+  
+                <label class="card-text">Nazwisko:</label>
+                <input type="text" [(ngModel)]="user.nazwisko" name="nazwisko" class="form-control" required />
+                <br>
+  
+                <label class="card-text">Pesel:</label>
+                <input type="text" [(ngModel)]="user.pesel" name="pesel" class="form-control" required />
+                <br>
+  
+                <label class="card-text">Kategoria:</label>
+                <select [(ngModel)]="user.kategoria" name="kategoria" class="form-control">
+                  <option value="SF">SF</option>
+                  <option value="Komedia">Komedia</option>
+                  <option value="Porno">Porno</option>
+                </select>
+                <br>
+  
+                <label class="card-text">Tytuł:</label>
+                <input type="text" [(ngModel)]="user.tytul" name="tytul" class="form-control" required />
+                <br>
+  
+                <button type="submit" (click)="dodaj()" class="btn btn-primary">Zapisz</button>
+              </form>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Lista użytkowników -->
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Pesel</th>
+                    <th>Tytuł</th>
+                    <th>Kategoria</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let user of users">
+                    <td>{{ user.pesel }}</td>
+                    <td>{{ user.tytul }}</td>
+                    <td>{{ user.kategoria }}</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+              <button type="submit" (click)="saveToFile()" class="btn btn-primary">Zapisz</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
